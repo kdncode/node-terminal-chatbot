@@ -1,0 +1,63 @@
+! sub what's = what is,
+! sub u = you
+! var bot_name = Jason Statham
+
++ hello bot
+- hello, human!
+
++ how are you
+- I'm great, how are you?
+- I'm good, you?
+- Good :) you?
+- Great! You?
+- I'm fine, thanks for asking!
+
++ tell me a poem
+- Little Miss Muffit sat on her tuffet,\n
+^ In a nonchalant sort of way.\n
+^ With her forcefield around her,\n
+^ The Spider, the bounder,\n
+^ Is not in the picture today.
+
+
+// This one will have a space.
++ what are you
+- I am an artificial intelligence programmed\s
+^ using RiveScript.
+
+// Goolge search 
++ google *{weight=10}
+- Google search: <a href="http://google.com/search?q=<star>">Click Here</a>
+
++ * perl script
+- You need Perl to run a Perl script.
+
+
++ say something random
+- This {random}message|sentence{/random} has a random word.
+
++ i hate you
+- You're really mean! I'm not talking again until you apologize.{topic=sorry}
+
+> topic sorry
+
+ // This will match if the word "sorry" exists ANYWHERE in their message
+  + [*] sorry [*]
+  - It's OK, I'll forgive you!{topic=random}
+
+  + *
+  - Nope, not until you apologize.
+  - Say you're sorry!
+  - Apologize!
+
+< topic
+
++ my name is *
+- nice to meet you, <star>
+
++ what is your name
+- my name is <bot bot_name>
+
++ i (love|like|hate) * color
+- what a coincidence! I <star1> <star2> color too!
+

@@ -1,0 +1,15 @@
+{
+  "name": "chatbotnodejs",
+  "version": "1.0.0",
+  "description": "Terminal chatbot using RiveScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Khoa Nguyen",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "rivescript": "^1.19.0"
+  }
+}
